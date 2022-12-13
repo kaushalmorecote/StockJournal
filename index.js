@@ -22,6 +22,8 @@ const CONNECTION_URL =
   "mongodb+srv://kaushalMore:Kunal594@cluster0.juxcepe.mongodb.net/?retryWrites=true&w=majority";
 const PORT = process.env.PORT || 5000;
 
+mongoose.set("strictQuery", false);
+
 mongoose
   .connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() =>
