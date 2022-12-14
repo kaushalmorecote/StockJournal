@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 const CONNECTION_URL =
   "mongodb+srv://kaushalMore:Kunal594@cluster0.juxcepe.mongodb.net/?retryWrites=true&w=majority";
-const PORT = 1000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.set("strictQuery", false);
 
